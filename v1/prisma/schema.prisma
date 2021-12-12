@@ -30,6 +30,5 @@ model Post {
 
   author User @relation(fields: [authorId], references: [id])
 
-  userId String
   @@map("posts")
 }
