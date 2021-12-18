@@ -77,7 +77,8 @@
 					"**/*.spec.js"
 				]
 			}
-		]
+		],
+		"@typescript-eslint/no-namespace": "off"
 	},
 	"settings": {
 		"import/resolver": {

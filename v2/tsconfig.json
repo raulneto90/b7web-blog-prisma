@@ -9,7 +9,10 @@
       ],
       "@modules/*": [
         "./modules/*"
-      ]
+      ],
+      "@errors/*": [
+        "./errors/*"
+      ],
     },
     "outDir": "./dist",
     "rootDir": "./src",
@@ -17,6 +20,7 @@
     "forceConsistentCasingInFileNames": true,
     "strict": false,
     "skipLibCheck": true,
-    "resolveJsonModule": true
+    "resolveJsonModule": true,
+    "experimentalDecorators": true
   }
 }

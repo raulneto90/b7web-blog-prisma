@@ -24,6 +24,10 @@ export class UsersRepository implements IUsersRepository {
     return this.repository.user.findUnique({ where: { id } });
   }
 
+  async findByEmail(email: string): Promise<User> {
+    return this.repository.user.findUnique({ where: { email } });
+  }
+
   async update(id: string, data: IUpdateUserDTO): Promise<void> {
     await this.repository.user.update({ where: { id }, data });
   }
