@@ -40,4 +40,4 @@ $ yarn
 # Run the server
 $ yarn dev
 ```
-Made with ❤️ by Raul Neto. Check out my [LinkedIn](https://www.linkedin.com/in/raul-neto-90/) profile for more information.
+Made with ❤️  by Raul Neto. Check out my [LinkedIn](https://www.linkedin.com/in/raul-neto-90/) profile for more information.
