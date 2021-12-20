@@ -78,7 +78,8 @@
 				]
 			}
 		],
-		"@typescript-eslint/no-namespace": "off"
+		"@typescript-eslint/no-namespace": "off",
+		"no-underscore-dangle": "off"
 	},
 	"settings": {
 		"import/resolver": {
