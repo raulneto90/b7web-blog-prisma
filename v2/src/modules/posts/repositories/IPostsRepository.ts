@@ -6,6 +6,7 @@ import { IUpdatePostDTO } from '../dtos/IUpdatePostDTO';
 export interface IPostsRepository {
   create(data: ICreatePostDTO): Promise<Post>;
   list(): Promise<Post[]>;
+  findById(id: string): Promise<Post>;
   update(id: string, data: IUpdatePostDTO): Promise<void>;
   delete(id: string): Promise<void>;
 }

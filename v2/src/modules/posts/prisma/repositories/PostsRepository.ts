@@ -20,6 +20,10 @@ export class PostsRepository implements IPostsRepository {
     return this.repository.post.findMany();
   }
 
+  async findById(id: string): Promise<Post> {
+    return this.repository.post.findUnique({ where: { id } });
+  }
+
   async update(id: string, data: IUpdatePostDTO): Promise<void> {
     await this.repository.post.update({ where: { id }, data });
   }

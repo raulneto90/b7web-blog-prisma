@@ -1,5 +1,5 @@
 export interface IUpdatePostDTO {
-  title: string;
-  content: string;
-  authorId: string;
+  title?: string;
+  content?: string;
+  authorId?: string;
 }
