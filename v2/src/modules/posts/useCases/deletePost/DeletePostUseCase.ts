@@ -1,10 +1,16 @@
+import { inject, injectable } from 'tsyringe';
+
 import { IDeletePostDTO } from '@modules/posts/dtos/IDeletePostDTO';
 import { IPostsRepository } from '@modules/posts/repositories/IPostsRepository';
 
 import { DeletePostError } from './DeletePostError';
 
+@injectable()
 export class DeletePostUseCase {
-  constructor(private postsRepository: IPostsRepository) {}
+  constructor(
+    @inject('PostsRepository')
+    private postsRepository: IPostsRepository,
+  ) {}
 
   async execute({ id }: IDeletePostDTO): Promise<void> {
     const post = await this.postsRepository.findById(id);
