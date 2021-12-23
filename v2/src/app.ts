@@ -6,6 +6,7 @@ import express, { NextFunction, Request, Response } from 'express';
 import { routes } from 'routes';
 
 import { ErrorHandler } from '@errors/ErrorHandler';
+import { ValidationErrors } from '@errors/ValidationErrors';
 
 const app = express();
 
@@ -16,6 +17,12 @@ app.use(
   (error: Error, request: Request, response: Response, _next: NextFunction) => {
     if (error instanceof ErrorHandler) {
       return response.status(error.statusCode).json({ message: error.message });
+    }
+
+    if (error instanceof ValidationErrors) {
+      return response
+        .status(error.statusCode)
+        .json({ message: error.message, errors: error.errors });
     }
 
     console.log(error);
